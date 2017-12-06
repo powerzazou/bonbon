@@ -11,7 +11,7 @@ class Header extends Component {
                 <Link to="/">
                     <img src={logo} className="App-logo" alt="logo" />
                 </Link>
-                <h1>Titre</h1>
+                <h1>MENU NAV</h1>
             </div>
         );
     }

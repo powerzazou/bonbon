@@ -9,7 +9,7 @@ class ProjectList extends Component {
                 {window.bonbonProjects.sort((a, b) => {
                     return a.order - b.order;
                 }).map((project) => {
-                    return <ProjectPreview key={project.id} title={project.title}></ProjectPreview>
+                    return <ProjectPreview key={project.id} project={project}></ProjectPreview>
                 })}
             </div>
         );

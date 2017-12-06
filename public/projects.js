@@ -13,5 +13,20 @@ window.bonbonProjects = [
         id: 3,
         order: 2,
         title: 'projet no 2'
+    },
+    {
+        id: 4,
+        order: 4,
+        title: 'projet no 4'
+    },
+    {
+        id: 5,
+        order: 5,
+        title: 'CINq'
+    },
+    {
+        id: 6,
+        order: 6,
+        title: 'Six Six Six'
     }
 ];
