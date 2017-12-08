@@ -7,7 +7,7 @@ class ProjectPreview extends Component {
         return (
             <div>
                 <p>{project.title}</p>
-                <img src='http://via.placeholder.com/350x250'/>
+                <img height='350' src='http://via.placeholder.com/350x250'/>
                 <Link to={`/projects/${project.id}`}>voir</Link>
             </div>
         );
