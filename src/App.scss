@@ -1,27 +1,36 @@
+@import './styles/_colors.scss';
+
+// Bootstrap
 .App {
-  text-align: center; }
+  text-align: center;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px; }
+  height: 80px;
+}
 
 .App-header {
   background-color: #222;
   height: 150px;
   padding: 20px;
-  color: white; }
+  color: white;
+}
 
 .App-title {
-  font-size: 1.5em; }
+  font-size: 1.5em;
+}
 
 .App-intro {
-  font-size: large; }
+  font-size: large;
+}
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+// Parallax
 
 .parallax-wrapper {
   /* The height needs to be set to a fixed value for the effect to work.
@@ -32,7 +41,8 @@
   /* Enable scrolling on the page. */
   overflow-y: auto;
   /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
-  perspective: 2px; }
+  perspective: 2px;
+}
 
 .parallax-element-after {
   background-color: linear-gradient(red, yellow);
@@ -46,6 +56,8 @@
   /* Force the background image to fill the whole element. */
   /* Keep the image from overlapping sibling elements. */
   z-index: -1;
-  background-image: url("/images/parallax.gif");
-  background-image: url("/images/parallax.gif"), linear-gradient(#6EE9EE, #76B4FF);
-  background-repeat: repeat; }
+  background-image: url('/images/parallax.gif');
+  background-image: url('/images/parallax.gif'), linear-gradient($gradient-blue, $gradient-blue-dark);  
+  background-repeat: repeat;
+}
+
