@@ -1,0 +1,6 @@
+.projectList {
+  width: 80%;
+  margin: auto; }
+  .projectList .flexWrap {
+    display: flex;
+    flex-wrap: wrap; }
