@@ -1,5 +1,18 @@
 @import '../styles/_colors.scss';
 
-h1 {
-  color: blue
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .menuItem {
+      color: $gradient-blue;
+      text-transform: uppercase;
+      margin: 20px;
+    }
+  }
 }
