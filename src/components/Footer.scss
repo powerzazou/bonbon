@@ -1,0 +1,13 @@
+@import '../styles/_colors.scss';
+
+.footer {
+    background-color: $gradient-blue-dark;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    padding: 15px;
+
+    p {
+        margin: 5px;
+    }
+}

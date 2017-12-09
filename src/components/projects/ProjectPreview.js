@@ -9,13 +9,14 @@ class ProjectPreview extends Component {
         if(this.props.odd) {
             cssClasses += ' odd';
         }
+        // <Link to={`/projects/${project.id}`}>voir</Link>
         return (
             <div className={cssClasses}>
                 <div className='container'>
                     <img height='350' src='http://via.placeholder.com/350x250'/>
                     <div className='infoBlock'>
                         <p>{project.title}</p>
-                        <Link to={`/projects/${project.id}`}>voir</Link>
+                        
                     </div>
                 </div>
             </div>

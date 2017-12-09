@@ -1,6 +1,10 @@
 .projectList {
   width: 80%;
   margin: auto; }
+  .projectList h2 {
+    color: white;
+    text-align: center;
+    text-transform: uppercase; }
   .projectList .flexWrap {
     display: flex;
     flex-wrap: wrap; }
