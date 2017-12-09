@@ -14,9 +14,11 @@ class Header extends Component {
                     </Link>
                 </div>
                 <div className='menu'>
-                    <div className='menuItem'>Graphic Design</div>
-                    <div className='menuItem'>Motion</div>
-                    <div className='menuItem'>Illustration</div>
+                    {window.bonbonCategories.sort((a, b) => {
+                        return a.order - b.order;
+                    }).map((category) => {
+                        return <div className='menuItem'>{category.title}</div>
+                    })}
                     <div className='menuItem'>About</div>
                     <div className='social'>
                 </div>

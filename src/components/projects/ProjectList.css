@@ -1,6 +1,7 @@
 .projectList {
   width: 80%;
-  margin: auto; }
+  margin: auto;
+  padding-top: 20px; }
   .projectList h2 {
     color: white;
     text-align: center;

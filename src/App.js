@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import ProjectList from './components/projects/ProjectList';
+import HomePage from './components/HomePage';
 import ProjectPage from './components/projects/ProjectPage';
 import { BrowserRouter, Route } from 'react-router-dom'
 
@@ -15,7 +15,7 @@ class App extends Component {
               <Header/>
                 <div className='parallax-wrapper'>
                     <div className='parallax-element'>
-                        <Route path="/" exact={true} component={ProjectList}/>
+                        <Route path="/" exact={true} component={HomePage}/>
                         <Route path="/projects/:id" component={ProjectPage}/>
                     </div>
                     <div className='parallax-element-after'></div>
