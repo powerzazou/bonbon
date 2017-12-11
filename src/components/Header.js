@@ -8,8 +8,12 @@ class Header extends Component {
     constructor (props) {
         super(props);
         this.scrolling = false;
+        this.categoriesOffset = [];
+        this.state = {
+            selectedCategoryId: window.bonbonCategories.sort((a, b) => {return a.order - b.order;})[0]
+        }
     }
-    scollToSmooth (targetedOffset, direction, step, minScroll, maxScroll) {
+    scrollToSmooth (targetedOffset, direction, step, minScroll, maxScroll) {
         let callback = false;
         const scrollTop = window.scrollY
         if (direction === 'upward' && scrollTop - step > targetedOffset && scrollTop - step > minScroll) {
@@ -20,7 +24,7 @@ class Header extends Component {
             callback = (scrollTop < targetedOffset);
         }
         if (callback) {
-            setTimeout(() => {this.scollToSmooth(targetedOffset, direction, step, minScroll, maxScroll)}, 1);
+            setTimeout(() => {this.scrollToSmooth(targetedOffset, direction, step, minScroll, maxScroll)}, 1);
         } else {
             this.scrolling = false;
         }
@@ -34,9 +38,13 @@ class Header extends Component {
         const direction = (window.scrollY <= categoryOffsetTop) ? 'downward' : 'upward';  
         const maxScroll = document.body.offsetHeight - window.innerHeight + document.querySelector('.header').offsetHeight;
         this.scrolling = true;
-        this.scollToSmooth(categoryOffsetTop, direction, 10, 0, maxScroll);
+        this.scrollToSmooth(categoryOffsetTop, direction, 10, 0, maxScroll);
+    }
+    handleScroll (e) {
+        // ça part tres mal ça va falloir trouver autre chose ... 
     }
     render() {
+        let menuItemCount = 0;
         return (
             <div className="header">
                 <div className='logo'>
@@ -48,23 +56,33 @@ class Header extends Component {
                     {window.bonbonCategories.sort((a, b) => {
                         return a.order - b.order;
                     }).map((category) => {
+                        menuItemCount++;
+                        const additionnalClasses = (category.id === this.state.selectedCategoryId.id) ? ' selected' : '';
                         return (
                             <div
                                 key={category.id}
-                                className='menuItem'
+                                id={'menuItem' + menuItemCount}
+                                className={'menuItem' + additionnalClasses}
                                 data-categoryid={category.id}
                                 onClick={(e) => this.handleClickOnMenuItem(e)}>
                                 {category.title}
                             </div>
                         )
                     })}
-                    <div className='menuItem'>About</div>
+                    <div id={'menuItem' + (menuItemCount + 1)} className={'menuItem'} >About</div>
                     <div className='social'>
                 </div>
                 
                 </div>
             </div>
         );
+    }
+
+    componentDidMount () {
+        [...document.querySelectorAll('.projectList')].forEach((node) => {
+            this.categoriesOffset.push = node.offsetTop;
+        });
+        document.addEventListener('scroll', (e) => this.handleScroll(e))
     }
 }
 

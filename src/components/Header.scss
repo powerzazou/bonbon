@@ -18,6 +18,10 @@
       color: $gradient-blue;
       text-transform: uppercase;
       margin: 20px;
+
+      &.selected {
+        text-decoration: underline;
+      }
     }
   }
 }
