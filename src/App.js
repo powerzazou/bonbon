@@ -11,16 +11,16 @@ class App extends Component {
   render() {
     return (
         <BrowserRouter>
-            <div>
-              <Header/>
-                <div className='parallax-wrapper'>
-                    <div className='parallax-element'>
-                        <Route path="/" exact={true} component={HomePage}/>
-                        <Route path="/projects/:id" component={ProjectPage}/>
+            <div className='app'>
+                <Header/>
+                    <div className='parallax-wrapper'>
+                        <div className='parallax-element'>
+                            <Route path="/" exact={true} component={HomePage}/>
+                            <Route path="/projects/:id" component={ProjectPage}/>
+                            <Footer/>
+                        </div>
+                        <div className='parallax-element-after'></div>
                     </div>
-                    <div className='parallax-element-after'></div>
-                    <Footer/>
-                </div>
             </div>
         </BrowserRouter>
     );

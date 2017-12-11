@@ -5,8 +5,8 @@ import './HomePage.css';
 class HomePage extends Component {
     render() {
         return (
-            <div class='homePage'>
-                <div class='flexWrap'>
+            <div className='homePage'>
+                <div className='flexWrap'>
                     {window.bonbonCategories.sort((a, b) => {
                         return a.order - b.order;
                     }).map((category) => {

@@ -6,9 +6,9 @@ class ProjectList extends Component {
     render() {
         const category = this.props.category;
         return (
-            <div class='projectList'>
+            <div id={'projectListCategory' + category.id} className='projectList'>
                 <h2>{category.title}</h2>
-                <div class='flexWrap'>
+                <div className='flexWrap'>
                     {window.bonbonProjects.filter((project) => {
                         return category.id === project.category;
                     }).sort((a, b) => {
