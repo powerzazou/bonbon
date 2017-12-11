@@ -24,31 +24,9 @@
     transform: rotate(360deg); } }
 
 .parallax-wrapper {
-  /* The height needs to be set to a fixed value for the effect to work.
-   * 100vh is the full height of the viewport. */
-  height: 100vh;
-  /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
-  overflow-x: hidden;
-  /* Enable scrolling on the page. */
-  overflow-y: auto;
-  /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
-  perspective: 2px;
-  margin-top: 84px; }
-  .parallax-wrapper::-webkit-scrollbar {
-    display: none; }
-
-.parallax-element-after {
-  background-color: linear-gradient(red, yellow);
-  ontent: " ";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  transform: translateZ(-1px) scale(1.5);
-  /* Force the background image to fill the whole element. */
-  /* Keep the image from overlapping sibling elements. */
-  z-index: -1;
-  background-image: url("/images/parallax.gif");
-  background-image: url("/images/parallax.gif"), linear-gradient(#6EE9EE, #76B4FF);
+  margin-top: 84px;
+  background-image: url("/images/parallax.png");
   background-repeat: repeat; }
+
+.gradient-wrapper {
+  background-image: linear-gradient(#6EE9EE, #76B4FF); }
