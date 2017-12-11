@@ -5,28 +5,36 @@ import { Link } from 'react-router-dom';
 
 
 class Header extends Component {
-    // TODO gerer min/max scroll :) 
-    scollToSmooth (scrolledElement, targetedOffset, direction, minScroll, maxScroll, step) {
+    constructor (props) {
+        super(props);
+        this.scrolling = false;
+    }
+    scollToSmooth (targetedOffset, direction, step, minScroll, maxScroll) {
         let callback = false;
-        if (direction === 'upward' && scrolledElement.scrollTop - step > targetedOffset && scrolledElement.scrollTop - step > minScroll) {
-            scrolledElement.scrollTop -= step;
-            callback = (scrolledElement.scrollTop > targetedOffset);
-        } else if (scrolledElement.scrollTop + step < targetedOffset && scrolledElement.scrollTop + step < maxScroll) {
-            scrolledElement.scrollTop += step;
-            callback = (scrolledElement.scrollTop < targetedOffset);
+        const scrollTop = window.scrollY
+        if (direction === 'upward' && scrollTop - step > targetedOffset && scrollTop - step > minScroll) {
+            window.scrollTo(0, scrollTop - step);
+            callback = (scrollTop > targetedOffset);
+        } else if (scrollTop + step < targetedOffset && scrollTop + step < maxScroll) {
+            window.scrollTo(0, scrollTop + step);
+            callback = (scrollTop < targetedOffset);
         }
         if (callback) {
-            setTimeout(() => {this.scollToSmooth(scrolledElement, targetedOffset, direction, minScroll, maxScroll, step)}, 1);
+            setTimeout(() => {this.scollToSmooth(targetedOffset, direction, step, minScroll, maxScroll)}, 1);
+        } else {
+            this.scrolling = false;
         }
     }
     handleClickOnMenuItem (e) {
+        if (this.scrolling) {
+            return;
+        }
         const categoryId = e.target.getAttribute('data-categoryid');
-        const categoryOffsetTop = document.querySelector('#projectListCategory' + categoryId).offsetTop;
-        const scrolledElement = document.querySelector('.parallax-wrapper');
-        const direction = (scrolledElement.scrollTop <= categoryOffsetTop) ? 'downward' : 'upward';  
-        const maxScroll = scrolledElement.scrollHeight - scrolledElement.clientHeight;
-        window.scrollTo(0, 0)        
-        this.scollToSmooth(scrolledElement, categoryOffsetTop, direction, 0, maxScroll, 10);
+        const categoryOffsetTop = document.querySelector('#projectListCategory' + categoryId).offsetTop - document.querySelector('.header').offsetHeight;
+        const direction = (window.scrollY <= categoryOffsetTop) ? 'downward' : 'upward';  
+        const maxScroll = document.body.offsetHeight - window.innerHeight + document.querySelector('.header').offsetHeight;
+        this.scrolling = true;
+        this.scollToSmooth(categoryOffsetTop, direction, 10, 0, maxScroll);
     }
     render() {
         return (
