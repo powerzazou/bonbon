@@ -14,5 +14,22 @@
       color: #6EE9EE;
       text-transform: uppercase;
       margin: 20px; }
+
+@keyframes selectedMenuItem {
+  from {
+    color: #6EE9EE; }
+  to {
+    color: #76B4FF; } }
       .header .menu .menuItem.selected {
-        text-decoration: underline; }
+        color: #76B4FF;
+        animation-name: selectedMenuItem;
+        animation-duration: 2s; }
+
+@keyframes unselectedMenuItem {
+  from {
+    color: #76B4FF; }
+  to {
+    color: #6EE9EE; } }
+      .header .menu .menuItem.previouslySelected {
+        animation-name: unselectedMenuItem;
+        animation-duration: 2s; }

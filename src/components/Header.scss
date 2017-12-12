@@ -19,8 +19,23 @@
       text-transform: uppercase;
       margin: 20px;
 
+      @keyframes selectedMenuItem {
+        from {color: $gradient-blue}
+        to {color: $gradient-blue-dark}
+      }
       &.selected {
-        text-decoration: underline;
+        color: $gradient-blue-dark;
+        animation-name: selectedMenuItem;
+        animation-duration: 2s;
+      }
+
+      @keyframes unselectedMenuItem {
+        from {color: $gradient-blue-dark}
+        to {color: $gradient-blue}
+      }
+      &.previouslySelected {
+        animation-name: unselectedMenuItem;
+        animation-duration: 2s;
       }
     }
   }
