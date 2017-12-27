@@ -13,7 +13,7 @@ class ProjectPreview extends Component {
         return (
             <div className={cssClasses}>
                 <div className='container'>
-                    <img height='350' src='http://via.placeholder.com/350x250'/>
+                    <img src='http://via.placeholder.com/510x340'/>
                     <div className='infoBlock'>
                         <p>{project.title}</p>
                         <Link to={`/projects/${project.id}`}>voir</Link>
