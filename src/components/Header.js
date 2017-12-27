@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Header.css';
-import logo from '../logo.svg';
+// import logo from '../logo.svg';
 import { Link } from 'react-router-dom';
 
 
@@ -64,7 +64,7 @@ class Header extends Component {
             <div className="header">
                 <div className='logo'>
                     <Link to="/">
-                        <img src={logo} className="App-logo" alt="logo" />
+                        <img src='./images/logo_header.png' className="App-logo" alt="logo" />
                     </Link>
                 </div>
                 <div className='menu'>

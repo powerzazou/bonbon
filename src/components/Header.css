@@ -5,7 +5,11 @@
   z-index: 10;
   background: white;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  height: 80px; }
+  .header .logo img {
+    height: 40px;
+    padding: 20px; }
   .header .menu {
     display: flex;
     justify-content: space-between;

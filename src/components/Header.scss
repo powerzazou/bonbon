@@ -8,6 +8,14 @@
   background: white;
   display: flex;
   justify-content: space-between;
+  height: 80px;
+
+  .logo {
+    img {
+      height: 40px;
+      padding: 20px;
+    }
+  }
 
   .menu {
     display: flex;
