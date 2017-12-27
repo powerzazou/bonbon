@@ -47,7 +47,7 @@ class Header extends Component {
         let newSelectedCategoryNumber = this.state.selectedCategoryNumber;
         const previouslySelectedCategoryNumber = this.state.selectedCategoryNumber;
         this.categoriesOffset.forEach((categoryOffset, index) => {
-            if (categoryOffset - 100 <= scrollY) {
+            if (categoryOffset - (window.innerHeight / 2) <= scrollY) {
                 newSelectedCategoryNumber = index;
             }
         });
