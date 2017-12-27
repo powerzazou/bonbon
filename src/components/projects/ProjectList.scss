@@ -1,7 +1,12 @@
+@import '../../styles/_colors.scss';
+
 .projectList{
     width: 90%;
     margin: auto;
     padding-top: 20px;
+    @media (min-width: $desktop-step) {
+        padding-bottom: 100px;
+    }
 
     h2 {
         color: white;
