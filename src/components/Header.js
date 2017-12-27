@@ -60,6 +60,7 @@ class Header extends Component {
     }
     render() {
         let menuItemCount = 0;
+        
         return (
             <div className="header">
                 <div className='logo'>

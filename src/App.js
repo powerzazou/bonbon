@@ -22,11 +22,21 @@ class App extends Component {
         this.currentScroll = window.scrollY;
     }
     render () {
+        // TODO A dynamiser en fonction de l'état
+        let displayIntroSlide = true;
+        let gradientWrapperDisplay = 'none';
         return (
             <BrowserRouter>
                 <div className='app'>
-                    <Header/>
-                        <div className='gradient-wrapper'>
+                    <div id='introSlide' className='gradient-wrapper'>
+                        <div id='introSlideLogo'>
+                            <img src='./images/logo_intro.png'/>
+                        </div>
+                        <div id='introSlideArrow'>
+                        <img src='./images/arrow_intro.png'/></div>
+                    </div>
+                    {!displayIntroSlide && <Header  />}
+                        <div className='gradient-wrapper' style= {{display: gradientWrapperDisplay}}>
                             <div className='parallax-wrapper'>
                                 <div className='parallax-element'>
                                     <Route path="/" exact={true} component={HomePage}/>
@@ -34,7 +44,7 @@ class App extends Component {
                                 </div>
                             </div>
                         </div>
-                    <Footer/>
+                    { !displayIntroSlide && <Footer/>}
                 </div>
             </BrowserRouter>
         );

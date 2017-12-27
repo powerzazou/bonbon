@@ -16,7 +16,7 @@ class ProjectPreview extends Component {
                     <img src='http://via.placeholder.com/510x340'/>
                     <div className='infoBlock'>
                         <p className='projectTitle'>{project.title}</p>
-                        <p className='projectDescription'>Ready to whear<br/>Spring-summer<br/>2016</p>
+                        <p className='projectDescription'>Ready to wear<br/>Spring-summer<br/>2016</p>
                         <p className='projectBrand'>BRAND : PHENIX</p>
                     </div>
                 </div>
