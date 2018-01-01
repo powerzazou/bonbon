@@ -12,6 +12,9 @@ class App extends Component {
         super(props);
         this.currentScroll = 0;
         this.currentParallaxPosition = 0;
+        this.state = {
+            displayIntroSlide: true
+        };
     }
     handleScroll (e) {
         // Attention aux perfs la hein !
@@ -21,29 +24,36 @@ class App extends Component {
         document.querySelector('.parallax-wrapper').style.backgroundPositionY = this.currentParallaxPosition + 'px';
         this.currentScroll = window.scrollY;
     }
+    handleClickOnIntro (e) {
+        console.log('click on intro');
+        this.setState({displayIntroSlide: false});
+    }
     render () {
         // TODO A dynamiser en fonction de l'état
-        let displayIntroSlide = true;
-        let gradientWrapperDisplay = 'none';
+        let displayIntroSlide = this.state.displayIntroSlide;
         return (
             <BrowserRouter>
                 <div className='app'>
-                    <div id='introSlide' className='gradient-wrapper'>
-                        <div id='introSlideLogo'>
-                            <img src='./images/logo_intro.png'/>
+                    {displayIntroSlide && 
+                        <div id='introSlide' className='gradient-wrapper' onClick={(e) => this.handleClickOnIntro(e)}>
+                            <div id='introSlideLogo'>
+                                <img src='./images/logo_intro.png'/>
+                            </div>
+                            <div id='introSlideArrow'>
+                            <img src='./images/arrow_intro.png'/></div>
                         </div>
-                        <div id='introSlideArrow'>
-                        <img src='./images/arrow_intro.png'/></div>
-                    </div>
+                    }
                     {!displayIntroSlide && <Header  />}
-                        <div className='gradient-wrapper' style= {{display: gradientWrapperDisplay}}>
-                            <div className='parallax-wrapper'>
-                                <div className='parallax-element'>
-                                    <Route path="/" exact={true} component={HomePage}/>
-                                    <Route path="/projects/:id" component={ProjectPage}/>
+                        {!displayIntroSlide &&
+                            <div className='gradient-wrapper'>
+                                <div className='parallax-wrapper'>
+                                    <div className='parallax-element'>
+                                        <Route path="/" exact={true} component={HomePage}/>
+                                        <Route path="/projects/:id" component={ProjectPage}/>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        }
                     { !displayIntroSlide && <Footer/>}
                 </div>
             </BrowserRouter>

@@ -15,6 +15,9 @@
       justify-content: center;
       width: 100%;
       height: 100%;
+      img {
+        max-width: 50%;
+      }
     }
 
     #introSlideArrow {
@@ -25,6 +28,9 @@
       align-items: center;
       width: 100%;
       bottom: 10px;
+      img {
+        max-width: 25%;
+      }
     }
   }
 }
