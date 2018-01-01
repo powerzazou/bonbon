@@ -1,6 +1,9 @@
 @import '../styles/_colors.scss';
 
 .footer {
+    &.hidden {
+        display: none;
+    }
     background-color: $gradient-blue-dark;
     text-align: center;
     color: white;

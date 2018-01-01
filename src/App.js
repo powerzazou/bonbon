@@ -26,26 +26,25 @@ class App extends Component {
     }
     handleClickOnIntro (e) {
         console.log('click on intro');
+        document.querySelector('body').style.overflow = 'auto';        
         this.setState({displayIntroSlide: false});
     }
     render () {
-        // TODO A dynamiser en fonction de l'état
-        let displayIntroSlide = this.state.displayIntroSlide;
+        const introSlideClass = this.state.displayIntroSlide ? 'shown' : 'hidden';
+        const contentClass =  this.state.displayIntroSlide ? 'hidden' : 'shown';
         return (
             <BrowserRouter>
                 <div className='app'>
-                    {displayIntroSlide && 
-                        <div id='introSlide' className='gradient-wrapper' onClick={(e) => this.handleClickOnIntro(e)}>
-                            <div id='introSlideLogo'>
-                                <img src='./images/logo_intro.png'/>
-                            </div>
-                            <div id='introSlideArrow'>
-                            <img src='./images/arrow_intro.png'/></div>
+                    <div id='introSlide' className={'gradient-wrapper ' + introSlideClass} onClick={(e) => this.handleClickOnIntro(e)}>
+                        <div id='introSlideLogo'>
+                            <img src='./images/logo_intro.png'/>
                         </div>
-                    }
-                    {!displayIntroSlide && <Header  />}
-                        {!displayIntroSlide &&
-                            <div className='gradient-wrapper'>
+                        <div id='introSlideArrow'>
+                        <img src='./images/arrow_intro.png'/></div>
+                    </div>
+                    <div className={'container ' + contentClass}> 
+                        <Header additionnalClasses={contentClass} />
+                            <div className={'gradient-wrapper'}>
                                 <div className='parallax-wrapper'>
                                     <div className='parallax-element'>
                                         <Route path="/" exact={true} component={HomePage}/>
@@ -53,16 +52,17 @@ class App extends Component {
                                     </div>
                                 </div>
                             </div>
-                        }
-                    { !displayIntroSlide && <Footer/>}
+                        <Footer />
+                    </div>
                 </div>
             </BrowserRouter>
         );
     }
 
     componentDidMount() {
+        document.querySelector('body').style.overflow = 'hidden';        
         this.currentScroll = window.scrollY;
-        document.addEventListener('scroll', (e) => this.handleScroll(e))
+        document.addEventListener('scroll', (e) => this.handleScroll(e));
     }
 }
 

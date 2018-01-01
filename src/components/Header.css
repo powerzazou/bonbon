@@ -7,6 +7,18 @@
   display: flex;
   justify-content: space-between;
   height: 80px; }
+  .header.hidden {
+    top: 100%; }
+
+@keyframes slideUpOnOpen {
+  0% {
+    top: 100%; }
+  100% {
+    top: 0px; } }
+  .header.shown {
+    animation-name: slideUpOnOpen;
+    animation-duration: 1s;
+    top: 0%; }
   .header .logo img {
     height: 40px;
     padding: 20px; }

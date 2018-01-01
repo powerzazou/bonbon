@@ -60,9 +60,12 @@ class Header extends Component {
     }
     render() {
         let menuItemCount = 0;
-        
+        let classes = 'header';
+        if (this.props.additionnalClasses) {
+            classes += ' ' + this.props.additionnalClasses;
+        }
         return (
-            <div className="header">
+            <div className={classes}>
                 <div className='logo'>
                     <Link to="/">
                         <img src='./images/logo_header.png' className="App-logo" alt="logo" />
