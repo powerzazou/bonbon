@@ -60,7 +60,10 @@ class App extends Component {
     }
 
     componentDidMount() {
-        document.querySelector('body').style.overflow = 'hidden';        
+        if ('scrollRestoration' in window.history) {
+            window.history.scrollRestoration = 'manual';
+        }
+        document.querySelector('body').style.overflow = 'hidden';     
         this.currentScroll = window.scrollY;
         document.addEventListener('scroll', (e) => this.handleScroll(e));
     }
