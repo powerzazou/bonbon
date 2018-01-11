@@ -20,12 +20,12 @@
   background: white;
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  height: 54px;
 
   .logo {
     img {
-      height: 40px;
-      padding: 20px;
+      // height: 40px;
+      padding: 6px;
     }
   }
 
@@ -33,11 +33,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+  ;
+
 
     .menuItem {
       color: $gradient-blue;
       text-transform: uppercase;
-      margin: 20px;
+      margin: 25px;
 
       @keyframes selectedMenuItem {
         from {color: $gradient-blue}
@@ -57,6 +61,14 @@
         animation-name: unselectedMenuItem;
         animation-duration: 2s;
       }
+    }
+
+    .social {
+      padding-left: 11px;
+      padding-right: 11px;
+    }
+    .social:last-of-type {
+      margin-right: 28px;
     }
   }
 }

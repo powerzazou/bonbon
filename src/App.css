@@ -62,9 +62,6 @@
 .App {
   text-align: center; }
 
-.App-logo {
-  height: 80px; }
-
 .App-header {
   background-color: #222;
   height: 150px;
@@ -84,9 +81,9 @@
     transform: rotate(360deg); } }
 
 .parallax-wrapper {
-  margin-top: 80px;
+  margin-top: 54px;
   background-image: url("/images/parallax.png");
   background-repeat: repeat; }
 
 .gradient-wrapper {
-  background-image: linear-gradient(#6EE9EE, #76B4FF); }
+  background-image: linear-gradient(#e5fffc, #5dafb7); }

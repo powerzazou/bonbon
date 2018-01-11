@@ -6,7 +6,7 @@
   background: white;
   display: flex;
   justify-content: space-between;
-  height: 80px; }
+  height: 54px; }
   .header.hidden {
     top: 100%; }
 
@@ -20,32 +20,38 @@
     animation-duration: 1s;
     top: 0%; }
   .header .logo img {
-    height: 40px;
-    padding: 20px; }
+    padding: 6px; }
   .header .menu {
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif; }
     .header .menu .menuItem {
-      color: #6EE9EE;
+      color: #e5fffc;
       text-transform: uppercase;
-      margin: 20px; }
+      margin: 25px; }
 
 @keyframes selectedMenuItem {
   from {
-    color: #6EE9EE; }
+    color: #e5fffc; }
   to {
-    color: #76B4FF; } }
+    color: #5dafb7; } }
       .header .menu .menuItem.selected {
-        color: #76B4FF;
+        color: #5dafb7;
         animation-name: selectedMenuItem;
         animation-duration: 2s; }
 
 @keyframes unselectedMenuItem {
   from {
-    color: #76B4FF; }
+    color: #5dafb7; }
   to {
-    color: #6EE9EE; } }
+    color: #e5fffc; } }
       .header .menu .menuItem.previouslySelected {
         animation-name: unselectedMenuItem;
         animation-duration: 2s; }
+    .header .menu .social {
+      padding-left: 11px;
+      padding-right: 11px; }
+    .header .menu .social:last-of-type {
+      margin-right: 28px; }
