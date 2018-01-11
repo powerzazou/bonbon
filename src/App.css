@@ -14,15 +14,25 @@
     height: 100%; }
     .app #introSlide #introSlideLogo img {
       max-width: 50%; }
+
+@keyframes bounce {
+  from {
+    padding-bottom: 0px; }
+  to {
+    padding-bottom: 10px; } }
   .app #introSlide #introSlideArrow {
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    bottom: 10px; }
+    bottom: 10%;
+    padding-top: 10px;
+    padding-bottom: 1Opx; }
     .app #introSlide #introSlideArrow img {
       max-width: 25%; }
+      .app #introSlide #introSlideArrow img.animated-arrow {
+        animation: bounce 0.35s ease 2 alternate; }
 
 @keyframes slideUpOnClose {
   0% {

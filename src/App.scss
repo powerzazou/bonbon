@@ -22,16 +22,29 @@
       }
     }
 
+    @keyframes bounce{
+      from {padding-bottom: 0px;}
+      to   {padding-bottom: 10px;}
+    }
+
     #introSlideArrow {
       position: absolute;
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
-      bottom: 10px;
+      bottom: 10%;
+      padding-top: 10px;
+      padding-bottom: 1Opx;
+
       img {
         max-width: 25%;
+        &.animated-arrow {
+          animation: bounce 0.35s ease 2 alternate;
+        }
       }
+
+
     }
 
     @keyframes slideUpOnClose {

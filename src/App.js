@@ -26,8 +26,16 @@ class App extends Component {
     }
     handleClickOnIntro (e) {
         console.log('click on intro');
-        document.querySelector('body').style.overflow = 'auto';        
+        document.querySelector('body').style.overflow = 'auto';
         this.setState({displayIntroSlide: false});
+    }
+    handleMouseEnterOnArrow (e) {
+        e.target.classList.add('animated-arrow');
+        setTimeout(() => {
+            if(document.querySelector('.animated-arrow')) {
+                document.querySelector('.animated-arrow').classList.remove('animated-arrow');
+            }
+        }, 1000);
     }
     render () {
         const introSlideClass = this.state.displayIntroSlide ? 'shown' : 'hidden';
@@ -39,10 +47,11 @@ class App extends Component {
                         <div id='introSlideLogo'>
                             <img src='./images/logo_intro.png'/>
                         </div>
-                        <div id='introSlideArrow'>
-                        <img src='./images/arrow_intro.png'/></div>
+                        <div id='introSlideArrow' >
+                            <img onMouseEnter={this.handleMouseEnterOnArrow} src='./images/arrow_intro.png'/>
+                        </div>
                     </div>
-                    <div className={'container ' + contentClass}> 
+                    <div className={'container ' + contentClass}>
                         <Header additionnalClasses={contentClass} />
                             <div className={'gradient-wrapper'}>
                                 <div className='parallax-wrapper'>
@@ -63,7 +72,7 @@ class App extends Component {
         if ('scrollRestoration' in window.history) {
             window.history.scrollRestoration = 'manual';
         }
-        document.querySelector('body').style.overflow = 'hidden';     
+        document.querySelector('body').style.overflow = 'hidden';
         this.currentScroll = window.scrollY;
         document.addEventListener('scroll', (e) => this.handleScroll(e));
     }
