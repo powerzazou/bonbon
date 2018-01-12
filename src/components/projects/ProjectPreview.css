@@ -20,7 +20,7 @@
     to {
       opacity: 0; } }
       .projectPreview .container .infoBlock {
-        color: #5dafb7;
+        color: #29838c;
         position: absolute;
         top: 0;
         left: 0;
@@ -28,9 +28,6 @@
         background: white;
         width: 100%;
         height: 99%;
-        animation-name: fadeIn;
-        animation-duration: 1s;
-        animation-fill-mode: forwards;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -38,6 +35,10 @@
         .projectPreview .container .infoBlock.focused {
           display: flex;
           animation-name: fadeOut;
+          animation-duration: 1s;
+          animation-fill-mode: forwards; }
+        .projectPreview .container .infoBlock.unfocused {
+          animation-name: fadeIn;
           animation-duration: 1s;
           animation-fill-mode: forwards; }
         .projectPreview .container .infoBlock .projectTitle {
