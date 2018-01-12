@@ -4,19 +4,16 @@ import './ProjectList.css';
 
 class ProjectList extends Component {
     render() {
-        const category = this.props.category;
+        // const category = this.props.category;
         return (
-            <div id={'projectListCategory' + category.id} className='projectList menuItemContainer'>
-                <h2>{category.title}</h2>
+            <div className='projectList menuItemContainer'>
                 <div className='flexWrap'>
-                    {window.bonbonProjects.filter((project) => {
-                        return category.id === project.category;
-                    }).sort((a, b) => {
+                    {window.bonbonProjects.sort((a, b) => {
                         return a.order - b.order;
                     }).map((project, index) => {
-                        return <ProjectPreview 
-                            key={project.id} 
-                            project={project} 
+                        return <ProjectPreview
+                            key={project.id}
+                            project={project}
                             odd={index%2 !== 0}>
                         </ProjectPreview>
                     })}

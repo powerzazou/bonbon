@@ -13,33 +13,6 @@ class Header extends Component {
             selectedCategoryNumber: 0
         }
     }
-    scrollToSmooth (targetedOffset, direction, step, minScroll, maxScroll) {
-        let callback = false;
-        const scrollTop = window.scrollY;
-        if (direction === 'upward' && scrollTop - step > targetedOffset && scrollTop - step > minScroll) {
-            window.scrollTo(0, scrollTop - step);
-            callback = (scrollTop > targetedOffset);
-        } else if (scrollTop + step < targetedOffset && scrollTop + step < maxScroll) {
-            window.scrollTo(0, scrollTop + step);
-            callback = (scrollTop < targetedOffset);
-        }
-        if (callback) {
-            setTimeout(() => {this.scrollToSmooth(targetedOffset, direction, step, minScroll, maxScroll)}, 1);
-        } else {
-            this.scrolling = false;
-        }
-    }
-    handleClickOnMenuItem (e) {
-        if (this.scrolling) {
-            return;
-        }
-        const categoryId = e.target.getAttribute('data-categoryid');
-        const categoryOffsetTop = document.querySelector('#projectListCategory' + categoryId).offsetTop - document.querySelector('.header').offsetHeight;
-        const direction = (window.scrollY <= categoryOffsetTop) ? 'downward' : 'upward';
-        const maxScroll = document.body.offsetHeight - window.innerHeight + document.querySelector('.header').offsetHeight;
-        this.scrolling = true;
-        this.scrollToSmooth(categoryOffsetTop, direction, 10, 0, maxScroll);
-    }
     handleScroll (e) {
         // ça part tres mal ça va falloir trouver autre chose ...
         const scrollY = window.scrollY;
@@ -71,23 +44,9 @@ class Header extends Component {
                     </Link>
                 </div>
                 <div className='menu'>
-                    {window.bonbonCategories.sort((a, b) => {
-                        return a.order - b.order;
-                    }).map((category, index) => {
-                        menuItemCount++;
-                        let additionnalClasses = (index === this.state.selectedCategoryNumber) ? ' selected' : '';
-                        additionnalClasses = (index === this.state.previouslySelectedCategoryNumber) ? ' previouslySelected' : additionnalClasses;
-                        return (
-                            <div
-                                key={category.id}
-                                id={'menuItem' + menuItemCount}
-                                className={'menuItem' + additionnalClasses}
-                                data-categoryid={category.id}
-                                onClick={(e) => this.handleClickOnMenuItem(e)}>
-                                {category.title}
-                            </div>
-                        )
-                    })}
+                    <div className={'menuItem selected'}>
+                        WORK
+                    </div>
                     <div id={'menuItem' + (menuItemCount + 1)} className={'menuItem'} >About</div>
                     <div className='social'>
                         <img src='./images/instagram_logo.png' alt="instagram" />

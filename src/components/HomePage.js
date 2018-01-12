@@ -7,15 +7,8 @@ class HomePage extends Component {
         return (
             <div className='homePage'>
                 <div className='flexWrap'>
-                    {window.bonbonCategories.sort((a, b) => {
-                        return a.order - b.order;
-                    }).map((category) => {
-                        return <ProjectList 
-                            key={category.id} 
-                            category={category} 
-                            >
-                        </ProjectList>
-                    })}
+                    <ProjectList>
+                    </ProjectList>
                 </div>
             </div>
         );
