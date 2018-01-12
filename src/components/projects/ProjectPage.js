@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Carousel from 'nuka-carousel';
+import './ProjectPage.css';
+
 
 class ProjectPage extends Component {
     constructor (props) {
@@ -25,8 +28,14 @@ class ProjectPage extends Component {
             )
         } else {
             return (
-                <div>
+                <div className='projectPage'>
                     <h1>{project.title}</h1>
+                    <Carousel>
+                        <img width='1000' height='400' src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide1"/>
+                        <img width='1000' height='400' src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide2"/>
+                        <img width='1000' height='400' src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide3"/>
+                        <img width='1000' height='400' src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide4"/>
+                    </Carousel>
                 </div>
             );
         }

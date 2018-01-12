@@ -40,7 +40,7 @@ class Header extends Component {
             <div className={classes}>
                 <div className='logo'>
                     <Link to="/">
-                        <img src='./images/logo_header.png' className="App-logo" alt="logo" />
+                        <img src='/images/logo_header.png' className="App-logo" alt="logo" />
                     </Link>
                 </div>
                 <div className='menu'>
@@ -49,10 +49,10 @@ class Header extends Component {
                     </div>
                     <div id={'menuItem' + (menuItemCount + 1)} className={'menuItem'} >About</div>
                     <div className='social'>
-                        <img src='./images/instagram_logo.png' alt="instagram" />
+                        <img src='/images/instagram_logo.png' alt="instagram" />
                     </div>
                     <div className='social'>
-                        <img src='./images/linkedin_logo.png' alt="linkedin" />
+                        <img src='/images/linkedin_logo.png' alt="linkedin" />
                     </div>
 
                 </div>

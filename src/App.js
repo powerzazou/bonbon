@@ -45,10 +45,10 @@ class App extends Component {
                 <div className='app'>
                     <div id='introSlide' className={'gradient-wrapper ' + introSlideClass} onClick={(e) => this.handleClickOnIntro(e)}>
                         <div id='introSlideLogo'>
-                            <img src='./images/logo_intro.png'/>
+                            <img src='/images/logo_intro.png'/>
                         </div>
                         <div id='introSlideArrow' >
-                            <img onMouseEnter={this.handleMouseEnterOnArrow} src='./images/arrow_intro.png'/>
+                            <img onMouseEnter={this.handleMouseEnterOnArrow} src='/images/arrow_intro.png'/>
                         </div>
                     </div>
                     <div className={'container ' + contentClass}>
