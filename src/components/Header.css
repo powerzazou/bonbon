@@ -28,28 +28,31 @@
     font-size: 11px;
     font-family: Arial, Helvetica, sans-serif; }
     .header .menu .menuItem {
-      color: #e5fffc;
+      color: #29838c;
       text-transform: uppercase;
       margin: 25px; }
-
-@keyframes selectedMenuItem {
-  from {
-    color: #e5fffc; }
-  to {
-    color: #5dafb7; } }
       .header .menu .menuItem.selected {
-        color: #5dafb7;
-        animation-name: selectedMenuItem;
-        animation-duration: 2s; }
+        color: #29838c; }
+        .header .menu .menuItem.selected:after {
+          border-bottom: 1px solid #29838c;
+          content: '';
+          display: block;
+          width: 15px; }
 
-@keyframes unselectedMenuItem {
-  from {
-    color: #5dafb7; }
-  to {
-    color: #e5fffc; } }
-      .header .menu .menuItem.previouslySelected {
-        animation-name: unselectedMenuItem;
-        animation-duration: 2s; }
+@keyframes hoverMenuItem {
+  0% {
+    width: 15px; }
+  50% {
+    width: 30px; }
+  100% {
+    width: 15px; } }
+      .header .menu .menuItem:hover:after {
+        border-bottom: 1px solid #29838c;
+        content: '';
+        display: block;
+        width: 15px;
+        animation-name: hoverMenuItem;
+        animation-duration: 1s; }
     .header .menu .social {
       padding-left: 11px;
       padding-right: 11px; }

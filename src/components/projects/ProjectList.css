@@ -1,7 +1,8 @@
 .projectList {
   width: 90%;
   margin: auto;
-  padding-top: 20px; }
+  padding-top: 20px;
+  max-width: 1130px; }
   @media (min-width: 941px) {
     .projectList {
       padding-bottom: 100px; } }

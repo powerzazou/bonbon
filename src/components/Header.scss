@@ -39,28 +39,38 @@
 
 
     .menuItem {
-      color: $gradient-blue;
+      color: $text;
       text-transform: uppercase;
       margin: 25px;
 
-      @keyframes selectedMenuItem {
-        from {color: $gradient-blue}
-        to {color: $gradient-blue-dark}
-      }
       &.selected {
-        color: $gradient-blue-dark;
-        animation-name: selectedMenuItem;
-        animation-duration: 2s;
+        color: $text;
+        &:after {
+          border-bottom: 1px solid $text;
+          content: '';
+          display: block;
+          width: 15px;
+        }
       }
 
-      @keyframes unselectedMenuItem {
-        from {color: $gradient-blue-dark}
-        to {color: $gradient-blue}
+      @keyframes hoverMenuItem {
+        0% {width: 15px;}
+        50% {width: 30px;}
+        100% {width: 15px;}
       }
-      &.previouslySelected {
-        animation-name: unselectedMenuItem;
-        animation-duration: 2s;
+
+      &:hover {
+        &:after {
+          border-bottom: 1px solid $text;
+          content: '';
+          display: block;
+          width: 15px;
+          animation-name: hoverMenuItem;
+          animation-duration: 1s;
+        
+        }
       }
+
     }
 
     .social {
