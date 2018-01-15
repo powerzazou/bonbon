@@ -27,15 +27,30 @@ class ProjectPreview extends Component {
             cssClasses += ' odd';
         }
         const infoBlockClasses = (typeof this.state.focusedClass === 'string') ? 'infoBlock ' + this.state.focusedClass : 'infoBlock';
-        // <Link to={`/projects/${project.id}`}>voir</Link>
+        if (typeof project.accroche === 'undefined') {
+            console.log(project);
+            project.accroche = {
+                image: '/images/projects/PROJET1_COUVERTURE_510x340.jpg',
+                catchPhrase: ' Le camp de vacances Aigle',
+                type: 'Identité visuelle',
+                brand: 'Brand: Aigle',
+                year: '2018'
+            };
+        }
         return (
             <div className={cssClasses}>
                 <div className='container' onMouseEnter={() => {this.handleMouseEnter()}} onMouseLeave={() => {this.handleMouseLeave()}} onClick={() => (this.handleClick())}>
-                    <img src='http://via.placeholder.com/510x340'/>
+                    <img src={(project.accroche && project.accroche.image) || 'http://via.placeholder.com/510x340'}/>
                     <div className={infoBlockClasses}>
                         <p className='projectTitle'>{project.title}</p>
-                        <p className='projectDescription'>Ready to wear<br/>Spring-summer<br/>2016</p>
-                        <p className='projectBrand'>BRAND : PHENIX</p>
+                        <div>
+                            <p className='projectDescription' dangerouslySetInnerHTML={{__html: project.accroche.catchPhrase}}></p>
+                            <p className='projectType' dangerouslySetInnerHTML={{__html: project.accroche.type}}></p>
+                        </div>
+                        <div>
+                            <p className='projectBrand' dangerouslySetInnerHTML={{__html: project.accroche.brand}}></p>
+                            <p className='projectYear'>{project.accroche.year}</p>
+                        </div>
                     </div>
                 </div>
             </div>
