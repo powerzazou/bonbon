@@ -46,8 +46,8 @@ window.bonbonProjects = [
         text: 'Quand une nouvelle botte sort du four, on lui prépare une sortie en grande pompe.',
         carousel: [
             '/images/projects/PROJET3_SLIDER1.jpg',
-            '/images/projects/PROJET3_SLIDER1.jpg',
-            '/images/projects/PROJET3_SLIDER3.jpg'
+            '/images/projects/PROJET3_SLIDER3.jpg',
+            '/images/projects/PROJET3_SLIDER4.jpg'
         ]
     },
     {

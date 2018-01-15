@@ -13,7 +13,8 @@ class App extends Component {
         this.currentScroll = 0;
         this.currentParallaxPosition = 0;
         this.state = {
-            displayIntroSlide: true
+            displayIntroSlide: sessionStorage.getItem('displayedIntroSlide') ? false : true,
+            contentClass: sessionStorage.getItem('displayedIntroSlide') ? '' : 'hidden'
         };
     }
     handleScroll (e) {
@@ -27,7 +28,8 @@ class App extends Component {
     handleClickOnIntro (e) {
         console.log('click on intro');
         document.querySelector('body').style.overflow = 'auto';
-        this.setState({displayIntroSlide: false});
+        this.setState({displayIntroSlide: false, contentClass: 'shown'});
+        sessionStorage.setItem('displayedIntroSlide', true);
     }
     handleMouseEnterOnArrow (e) {
         e.target.classList.add('animated-arrow');
@@ -39,18 +41,20 @@ class App extends Component {
     }
     render () {
         const introSlideClass = this.state.displayIntroSlide ? 'shown' : 'hidden';
-        const contentClass =  this.state.displayIntroSlide ? 'hidden' : 'shown';
+        const contentClass =  this.state.contentClass;
         return (
-            <BrowserRouter>
+            <BrowserRouter basename='/' forceRefresh='true'>
                 <div className='app'>
-                    <div id='introSlide' className={'gradient-wrapper ' + introSlideClass} onClick={(e) => this.handleClickOnIntro(e)}>
-                        <div id='introSlideLogo'>
-                            <img src='/images/logo_intro.png'/>
+                    {(this.state.contentClass === 'hidden' || this.state.contentClass === 'shown') && 
+                        <div id='introSlide' className={'gradient-wrapper ' + introSlideClass} onClick={(e) => this.handleClickOnIntro(e)}>
+                            <div id='introSlideLogo'>
+                                <img src='/images/logo_intro.png'/>
+                            </div>
+                            <div id='introSlideArrow' >
+                                <img onMouseEnter={this.handleMouseEnterOnArrow} src='/images/arrow_intro.png'/>
+                            </div>
                         </div>
-                        <div id='introSlideArrow' >
-                            <img onMouseEnter={this.handleMouseEnterOnArrow} src='/images/arrow_intro.png'/>
-                        </div>
-                    </div>
+                    }
                     <div className={'container ' + contentClass}>
                         <Header additionnalClasses={contentClass} />
                             <div className={'gradient-wrapper'} style={{minHeight: window.innerHeight + 'px'}}>
@@ -72,7 +76,9 @@ class App extends Component {
         if ('scrollRestoration' in window.history) {
             window.history.scrollRestoration = 'manual';
         }
-        document.querySelector('body').style.overflow = 'hidden';
+        if (this.state.contentClass === 'hidden' || this.state.contentClass === 'shown') {
+            document.querySelector('body').style.overflow = 'hidden';
+        }
         this.currentScroll = window.scrollY;
         document.addEventListener('scroll', (e) => this.handleScroll(e));
     }
