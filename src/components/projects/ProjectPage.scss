@@ -5,4 +5,12 @@
   margin: auto;
   padding-top: 20px;
   min-height: 400px;
+  max-width: 1130px;
+  color: $text;
+  text-align: center;
+
+  .slider-list {
+    text-align: center;
+  }
+
 }

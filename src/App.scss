@@ -121,6 +121,8 @@
 
 .gradient-wrapper {
   background-image:  linear-gradient($gradient-blue, $gradient-blue-dark);
+  display: flex;
+  flex-direction: column;
 }
 
 

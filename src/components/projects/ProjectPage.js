@@ -18,8 +18,17 @@ class ProjectPage extends Component {
             return project.id === parseInt(id, 10)
         })
     }
+    getCarousel (carousel) {
+        return <Carousel decorators={SliderDecorators}> 
+            {carousel.map((image) => {
+                return <img src={image}/>
+            })}
+        </Carousel>
+    }
     render() {
         const project = this.state.project;
+        const carousel = (project.carousel) ? this.getCarousel(project.carousel) : null;
+        console.log(carousel);
         if (typeof this.state.project === 'undefined') {
             return (
                 <div>
@@ -31,12 +40,15 @@ class ProjectPage extends Component {
             return (
                 <div className='projectPage'>
                     <h1>{project.title}</h1>
-                    <Carousel decorators={SliderDecorators}>
-                        <img width='1000' height='400' src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide1"/>
-                        <img width='1000' height='400' src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide2"/>
-                        <img width='1000' height='400' src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide3"/>
-                        <img width='1000' height='400' src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide4"/>
-                    </Carousel>
+                    {carousel}
+                    <div>
+                        <p className='projectDescription' dangerouslySetInnerHTML={{__html: project.text}}></p>
+                        <p className='projectType' dangerouslySetInnerHTML={{__html: project.accroche.type}}></p>
+                    </div>
+                    <div>
+                        <p className='projectBrand' dangerouslySetInnerHTML={{__html: project.accroche.brand}}></p>
+                        <p className='projectYear'>{project.accroche.year}</p>
+                    </div>
                 </div>
             );
         }

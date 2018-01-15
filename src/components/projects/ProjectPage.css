@@ -2,4 +2,9 @@
   width: 90%;
   margin: auto;
   padding-top: 20px;
-  min-height: 400px; }
+  min-height: 400px;
+  max-width: 1130px;
+  color: #29838c;
+  text-align: center; }
+  .projectPage .slider-list {
+    text-align: center; }

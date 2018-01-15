@@ -96,4 +96,6 @@
   background-repeat: repeat; }
 
 .gradient-wrapper {
-  background-image: linear-gradient(#e5fffc, #5dafb7); }
+  background-image: linear-gradient(#e5fffc, #5dafb7);
+  display: flex;
+  flex-direction: column; }

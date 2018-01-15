@@ -53,7 +53,7 @@ class App extends Component {
                     </div>
                     <div className={'container ' + contentClass}>
                         <Header additionnalClasses={contentClass} />
-                            <div className={'gradient-wrapper'}>
+                            <div className={'gradient-wrapper'} style={{minHeight: window.innerHeight + 'px'}}>
                                 <div className='parallax-wrapper'>
                                     <div className='parallax-element'>
                                         <Route path="/" exact={true} component={HomePage}/>
