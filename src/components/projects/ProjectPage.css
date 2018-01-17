@@ -8,3 +8,6 @@
   text-align: center; }
   .projectPage .slider-list {
     text-align: center; }
+  .projectPage .projectDescription {
+    text-align: left;
+    font-size: 14px; }

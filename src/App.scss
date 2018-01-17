@@ -2,6 +2,10 @@
 
 // intro
 .app {
+  a {
+    text-decoration: none;
+    color:inherit;
+  }
   #introSlide {
     position: absolute;
     top: 0;

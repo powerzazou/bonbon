@@ -39,15 +39,16 @@ class ProjectPage extends Component {
         } else {
             return (
                 <div className='projectPage'>
-                    <h1>{project.title}</h1>
                     {carousel}
-                    <div>
-                        <p className='projectDescription' dangerouslySetInnerHTML={{__html: project.text}}></p>
-                        <p className='projectType' dangerouslySetInnerHTML={{__html: project.accroche.type}}></p>
-                    </div>
-                    <div>
-                        <p className='projectBrand' dangerouslySetInnerHTML={{__html: project.accroche.brand}}></p>
-                        <p className='projectYear'>{project.accroche.year}</p>
+                    <div className='projectDescription'>
+                        <div>
+                            <p className='projectDescription' dangerouslySetInnerHTML={{__html: project.text}}></p>
+                            <p className='projectType' dangerouslySetInnerHTML={{__html: project.accroche.type}}></p>
+                        </div>
+                        <div>
+                            <p className='projectBrand' dangerouslySetInnerHTML={{__html: project.accroche.brand}}></p>
+                            <p className='projectYear'>{project.accroche.year}</p>
+                        </div>
                     </div>
                 </div>
             );

@@ -45,7 +45,9 @@ class Header extends Component {
                 </div>
                 <div className='menu'>
                     <div className={'menuItem selected'}>
-                        WORK
+                        <Link to="/">
+                            WORK
+                        </Link>
                     </div>
                     <div id={'menuItem' + (menuItemCount + 1)} className={'menuItem'} >About</div>
                     <div className='social'>
