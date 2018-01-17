@@ -19,11 +19,12 @@ var DefaultDecorators = [{
     displayName: 'component',
     render: function render() {
       return _react2.default.createElement(
-        'button',
+        'img',
         {
           style: this.getButtonStyles(this.props.currentSlide === 0 && !this.props.wrapAround),
-          onClick: this.handleClick },
-        'Précédent'
+          onClick: this.handleClick,
+          src: '/images/slider/slider_previous_arrow.png'
+        }
       );
     },
     handleClick: function handleClick(e) {
@@ -48,11 +49,12 @@ var DefaultDecorators = [{
     displayName: 'component',
     render: function render() {
       return _react2.default.createElement(
-        'button',
+        'img',
         {
           style: this.getButtonStyles(this.props.currentSlide + this.props.slidesToScroll >= this.props.slideCount && !this.props.wrapAround),
-          onClick: this.handleClick },
-        'Suivant'
+          onClick: this.handleClick,
+          src: '/images/slider/slider_next_arrow.png' 
+        },
       );
     },
     handleClick: function handleClick(e) {
@@ -121,12 +123,12 @@ var DefaultDecorators = [{
       return {
         border: 0,
         background: 'transparent',
-        color: 'black',
+        color: active ? '#29838c' : '#82bbb8',
         cursor: 'pointer',
         padding: 10,
         outline: 0,
         fontSize: 24,
-        opacity: active ? 1 : 0.5
+        opacity: active ? 1 : 0.6
       };
     }
   }),

@@ -8,7 +8,7 @@ class ProjectPreview extends Component {
     constructor (props) {
         super(props);
         this.state = {
-            focusedClass: false
+            focusedClass: true
         }
     }
     handleMouseEnter () {
