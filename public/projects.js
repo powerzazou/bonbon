@@ -22,7 +22,7 @@ window.bonbonProjects = [
         accroche: {
             image: '/images/projects/PROJET2_COUVERTURE1_510x340.jpg',
             catchPhrase: 'Un Paris sur l\'extérieur',
-            type: 'Identité visuelle • Web design',
+            type: 'Identité visuelle <br/> Web design',
             brand: 'Brand: Les Terrasses de Lutèce',
             year: '2017',
         },
@@ -39,7 +39,7 @@ window.bonbonProjects = [
         accroche: {
             image: '/images/projects/PROJET3_COUVERTURE_510x340.jpg',
             catchPhrase: 'La botte Rock & Walk',
-            type: 'Identité visuelle • Lookbook • Animation',
+            type: 'Identité visuelle <br/> Lookbook <br/> Animation',
             brand: 'Brand: Aigle',
             year: '2017',
         },

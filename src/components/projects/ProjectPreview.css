@@ -16,10 +16,12 @@
       opacity: 1; } }
   @keyframes fadeIn {
     from {
-      opacity: 0.7; }
+      opacity: 1; }
     to {
       opacity: 0; } }
       .projectPreview .container .infoBlock {
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
         color: #29838c;
         position: absolute;
         top: 0;
@@ -31,7 +33,10 @@
         text-align: center;
         display: flex;
         flex-direction: column;
-        justify-content: space-between; }
+        justify-content: center; }
+        .projectPreview .container .infoBlock p {
+          margin-top: 5px;
+          margin-bottom: 5px; }
         .projectPreview .container .infoBlock.focused {
           display: flex;
           animation-name: fadeOut;
@@ -44,7 +49,12 @@
         .projectPreview .container .infoBlock .projectTitle {
           text-transform: uppercase;
           font-size: 21px;
-          font-family: Arial, Helvetica, sans-serif; }
+          font-weight: bold; }
+        .projectPreview .container .infoBlock .projectDetails {
+          margin-top: 20px;
+          font-size: 16px; }
+        .projectPreview .container .infoBlock .projectSeparator {
+          font-size: 34px; }
       .projectPreview .container img {
         width: 100%; }
     .projectPreview.odd {

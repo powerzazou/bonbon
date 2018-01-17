@@ -8,7 +8,7 @@ class ProjectPreview extends Component {
     constructor (props) {
         super(props);
         this.state = {
-            focusedClass: true
+            focusedClass: false
         }
     }
     handleMouseEnter () {
@@ -42,13 +42,12 @@ class ProjectPreview extends Component {
                 <div className='container' onMouseEnter={() => {this.handleMouseEnter()}} onMouseLeave={() => {this.handleMouseLeave()}} onClick={() => (this.handleClick())}>
                     <img src={(project.accroche && project.accroche.image) || 'http://via.placeholder.com/510x340'}/>
                     <div className={infoBlockClasses}>
+                        <p className='projectBrand' dangerouslySetInnerHTML={{__html: project.accroche.brand}}></p>
                         <p className='projectTitle'>{project.title}</p>
-                        <div>
+                        <div className='projectDetails'>
                             <p className='projectDescription' dangerouslySetInnerHTML={{__html: project.accroche.catchPhrase}}></p>
                             <p className='projectType' dangerouslySetInnerHTML={{__html: project.accroche.type}}></p>
-                        </div>
-                        <div>
-                            <p className='projectBrand' dangerouslySetInnerHTML={{__html: project.accroche.brand}}></p>
+                            <p className='projectSeparator'>•</p>
                             <p className='projectYear'>{project.accroche.year}</p>
                         </div>
                     </div>
