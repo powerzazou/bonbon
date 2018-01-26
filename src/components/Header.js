@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
 
-
 class Header extends Component {
     constructor (props) {
         super(props);
@@ -10,8 +9,9 @@ class Header extends Component {
         this.categoriesOffset = [];
         this.state = {
             previouslySelectedCategoryNumber: -1,
-            selectedCategoryNumber: 0
-        }
+            selectedCategoryNumber: 0,
+            logoSrc: (window.innerWidth < 450) ? '/images/logo_header_mobile.png' : '/images/logo_header.png'
+        };
     }
     handleScroll (e) {
         // ça part tres mal ça va falloir trouver autre chose ...
@@ -40,7 +40,7 @@ class Header extends Component {
             <div className={classes}>
                 <div className='logo'>
                     <Link to="/">
-                        <img src='/images/logo_header.png' className="App-logo" alt="logo" />
+                        <img src={this.state.logoSrc} className="App-logo" alt="logo" />
                     </Link>
                 </div>
                 <div className='menu'>

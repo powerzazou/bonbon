@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './ProjectPreview.css';
 import { withRouter } from 'react-router-dom';
+import bowser from 'bowser';
+
 
 
 class ProjectPreview extends Component {
@@ -37,20 +39,30 @@ class ProjectPreview extends Component {
                 year: '2018'
             };
         }
+        const infoBlock = (bowser.tablet || bowser.mobile) ?
+            ((<div className={infoBlockClasses}>
+                <p className='projectBrand' dangerouslySetInnerHTML={{__html: project.accroche.brand}}></p>
+                <p className='projectTitle'>{project.title}</p>
+
+            </div>))
+            :
+            (<div className={infoBlockClasses}>
+                <p className='projectBrand' dangerouslySetInnerHTML={{__html: project.accroche.brand}}></p>
+                <p className='projectTitle'>{project.title}</p>
+                <div className='projectDetails'>
+                    <p className='projectDescription' dangerouslySetInnerHTML={{__html: project.accroche.catchPhrase}}></p>
+                    <p className='projectType' dangerouslySetInnerHTML={{__html: project.accroche.type}}></p>
+                    <p className='projectSeparator'>•</p>
+                    <p className='projectYear'>{project.accroche.year}</p>
+                </div>
+            </div>)
+        ;
+
         return (
             <div className={cssClasses}>
                 <div className='container' onMouseEnter={() => {this.handleMouseEnter()}} onMouseLeave={() => {this.handleMouseLeave()}} onClick={() => (this.handleClick())}>
                     <img src={(project.accroche && project.accroche.image) || 'http://via.placeholder.com/510x340'}/>
-                    <div className={infoBlockClasses}>
-                        <p className='projectBrand' dangerouslySetInnerHTML={{__html: project.accroche.brand}}></p>
-                        <p className='projectTitle'>{project.title}</p>
-                        <div className='projectDetails'>
-                            <p className='projectDescription' dangerouslySetInnerHTML={{__html: project.accroche.catchPhrase}}></p>
-                            <p className='projectType' dangerouslySetInnerHTML={{__html: project.accroche.type}}></p>
-                            <p className='projectSeparator'>•</p>
-                            <p className='projectYear'>{project.accroche.year}</p>
-                        </div>
-                    </div>
+                    {infoBlock}
                 </div>
             </div>
         );
