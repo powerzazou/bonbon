@@ -3,7 +3,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './components/HomePage';
 import ProjectPage from './components/projects/ProjectPage';
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import './App.css';
 
@@ -60,9 +60,11 @@ class App extends Component {
                             <div className={'gradient-wrapper'} style={{minHeight: window.innerHeight + 'px'}}>
                                 <div className='parallax-wrapper'>
                                     <div className='parallax-element'>
-                                        <Route path="/" exact={true} component={HomePage}/>
-                                        <Route path="/projects/:id" component={ProjectPage}/>
-                                        <Route path="*" component={HomePage}/>
+                                        <Switch>
+                                            <Route path="/" exact={true} component={HomePage}/>
+                                            <Route path="/projects/:id" component={ProjectPage}/>
+                                            <Route path="*" component={HomePage}/>
+                                        </Switch>
                                     </div>
                                 </div>
                             </div>
