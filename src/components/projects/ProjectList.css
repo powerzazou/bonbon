@@ -6,6 +6,10 @@
   @media (min-width: 941px) {
     .projectList {
       padding-bottom: 100px; } }
+  @media (max-width: 1190px) {
+    .projectList {
+      width: 100%;
+      margin: 0; } }
   .projectList h2 {
     color: white;
     text-align: center;
