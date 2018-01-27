@@ -43,7 +43,7 @@ class App extends Component {
         const introSlideClass = this.state.displayIntroSlide ? 'shown' : 'hidden';
         const contentClass =  this.state.contentClass;
         return (
-            <BrowserRouter basename='/' forceRefresh='true'>
+            <BrowserRouter basename='/' forceRefresh={true}>
                 <div className='app'>
                     {(this.state.contentClass === 'hidden' || this.state.contentClass === 'shown') && 
                         <div id='introSlide' className={'gradient-wrapper ' + introSlideClass} onClick={(e) => this.handleClickOnIntro(e)}>

@@ -59,21 +59,6 @@ window.bonbonProjects = [
         id: 5,
         order: 5,
         title: 'CINq'
-    },
-    {
-        id: 6,
-        order: 6,
-        title: 'Six Six Six'
-    },
-    {
-        id: 5,
-        order: 5,
-        title: 'CINq'
-    },
-    {
-        id: 6,
-        order: 6,
-        title: 'Six Six Six'
     }
 ];
 

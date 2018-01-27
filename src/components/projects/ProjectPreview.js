@@ -10,7 +10,8 @@ class ProjectPreview extends Component {
     constructor (props) {
         super(props);
         this.state = {
-            focusedClass: false
+            focusedClass: false,
+            id: 'projectPreview-' + this.props.project.id
         }
     }
     handleMouseEnter () {
@@ -59,13 +60,28 @@ class ProjectPreview extends Component {
         ;
 
         return (
-            <div className={cssClasses}>
+            <div id={this.state.id} className={cssClasses}>
                 <div className='container' onMouseEnter={() => {this.handleMouseEnter()}} onMouseLeave={() => {this.handleMouseLeave()}} onClick={() => (this.handleClick())}>
                     <img src={(project.accroche && project.accroche.image) || 'http://via.placeholder.com/510x340'}/>
                     {infoBlock}
                 </div>
             </div>
         );
+    }
+    componentDidMount () {
+        this.afterRender();
+    }
+    componentDidUpdate () {
+        this.afterRender()
+    }
+    afterRender () {
+
+        // Truc relou pour caler l'image a la bonne hauteur :(
+        setTimeout(() => {
+            const containerHeight  = document.querySelector('#' + this.state.id + ' > .container > img').height;
+            document.querySelector('#'+ this.state.id).style.height = containerHeight + 'px';
+        }, 10);
+        
     }
 }
 

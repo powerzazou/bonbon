@@ -13,3 +13,6 @@
   .projectList .flexWrap {
     display: flex;
     flex-wrap: wrap; }
+    @media (max-width: 1190px) {
+      .projectList .flexWrap {
+        flex-direction: column; } }

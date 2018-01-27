@@ -1,92 +1,68 @@
-@media (min-width: 941px) {
-  .projectPreview {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 340px; }
-    .projectPreview .container {
-      position: absolute;
-      width: 44%;
-      max-width: 510px; }
-  @keyframes fadeOut {
-    from {
-      opacity: 0; }
-    to {
-      opacity: 1; } }
-  @keyframes fadeIn {
-    from {
-      opacity: 1; }
-    to {
-      opacity: 0; } }
-      .projectPreview .container .infoBlock {
-        font-size: 18px;
-        font-family: Arial, Helvetica, sans-serif;
-        color: #fff;
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-        width: 100%;
-        height: 99%;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center; }
-        .projectPreview .container .infoBlock p {
-          margin-top: 5px;
-          margin-bottom: 5px; }
-        .projectPreview .container .infoBlock.focused {
-          display: flex;
-          animation-name: fadeOut;
-          animation-duration: 1s;
-          animation-fill-mode: forwards; }
-        .projectPreview .container .infoBlock.unfocused {
-          animation-name: fadeIn;
-          animation-duration: 1s;
-          animation-fill-mode: forwards; }
-        .projectPreview .container .infoBlock .projectTitle {
-          text-transform: uppercase;
-          font-size: 21px;
-          font-weight: bold; }
-        .projectPreview .container .infoBlock .projectDetails {
-          margin-top: 20px;
-          font-size: 16px; }
-        .projectPreview .container .infoBlock .projectSeparator {
-          font-size: 34px; }
-      .projectPreview .container img {
-        width: 100%; }
-    .projectPreview.odd {
-      margin-top: 50px; } }
+.projectPreview {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 340px; }
+  @media (max-width: 1190px) {
+    .projectPreview {
+      width: 100%; } }
+  .projectPreview .container {
+    position: absolute;
+    width: 44%;
+    max-width: 510px; }
 
-@media (max-width: 940px) {
-  .projectPreview {
-    width: 100%;
-    height: 350px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-    .projectPreview .container {
+@keyframes fadeOut {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+    .projectPreview .container .infoBlock {
+      font-size: 18px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #fff;
       position: absolute;
-      width: 90%;
-      max-width: 510px;
-      max-height: 340px;
-      margin-left: auto;
-      margin-right: auto; }
-      .projectPreview .container .infoBlock {
-        color: #5dafb7;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        background: white;
-        margin-right: 10px;
-        margin-bottom: 15px;
-        padding-left: 15px;
-        padding-right: 15px;
-        padding-bottom: 5px; }
-      .projectPreview .container img {
-        width: 100%; } }
+      top: 0;
+      left: 0;
+      opacity: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 99%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .projectPreview .container .infoBlock p {
+        margin-top: 5px;
+        margin-bottom: 5px; }
+      .projectPreview .container .infoBlock.focused {
+        display: flex;
+        animation-name: fadeOut;
+        animation-duration: 1s;
+        animation-fill-mode: forwards; }
+      .projectPreview .container .infoBlock.unfocused {
+        animation-name: fadeIn;
+        animation-duration: 1s;
+        animation-fill-mode: forwards; }
+      .projectPreview .container .infoBlock .projectTitle {
+        text-transform: uppercase;
+        font-size: 21px;
+        font-weight: bold; }
+      .projectPreview .container .infoBlock .projectDetails {
+        margin-top: 20px;
+        font-size: 16px; }
+      .projectPreview .container .infoBlock .projectSeparator {
+        font-size: 34px; }
+    .projectPreview .container img {
+      width: 100%; }
+  @media (max-width: 1190px) {
+    .projectPreview {
+      margin-top: 50px; } }
+  .projectPreview.odd {
+    margin-top: 50px; }

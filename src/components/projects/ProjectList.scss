@@ -18,5 +18,9 @@
     .flexWrap{
         display: flex;
         flex-wrap: wrap;
+
+        @media (max-width: 1190px) {
+            flex-direction: column;
+        }
     }
 }
