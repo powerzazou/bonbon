@@ -62,6 +62,7 @@ class App extends Component {
                                     <div className='parallax-element'>
                                         <Route path="/" exact={true} component={HomePage}/>
                                         <Route path="/projects/:id" component={ProjectPage}/>
+                                        <Route path="*" component={HomePage}/>
                                     </div>
                                 </div>
                             </div>
