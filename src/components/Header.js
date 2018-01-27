@@ -51,10 +51,14 @@ class Header extends Component {
                     </div>
                     <div id={'menuItem' + (menuItemCount + 1)} className={'menuItem'} >About</div>
                     <div className='social'>
-                        <img src='/images/instagram_logo.png' alt="instagram" />
+                        <a href='https://www.instagram.com/paulinemidon/' target='_blank'>
+                            <img src='/images/instagram_logo.png' alt="instagram" />
+                        </a>
                     </div>
                     <div className='social'>
-                        <img src='/images/linkedin_logo.png' alt="linkedin" />
+                        <a href='https://www.linkedin.com/in/pauline-midon-05972566/' target='_blank'>
+                            <img src='/images/linkedin_logo.png' alt="linkedin" />
+                        </a>
                     </div>
 
                 </div>
