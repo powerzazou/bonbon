@@ -41,7 +41,7 @@ class ProjectPreview extends Component {
             };
         }
         const infoBlock = (bowser.tablet || bowser.mobile) ?
-            ((<div className={infoBlockClasses}>
+            ((<div className={'infoBlock mobile'}>
                 <p className='projectBrand' dangerouslySetInnerHTML={{__html: project.accroche.brand}}></p>
                 <p className='projectTitle'>{project.title}</p>
 
@@ -79,8 +79,10 @@ class ProjectPreview extends Component {
         // Truc relou pour caler l'image a la bonne hauteur :(
         setTimeout(() => {
             const containerHeight  = document.querySelector('#' + this.state.id + ' > .container > img').height;
-            document.querySelector('#'+ this.state.id).style.height = containerHeight + 'px';
-        }, 10);
+            if (containerHeight > 0) {
+                document.querySelector('#'+ this.state.id).style.height = containerHeight + 'px';
+            }
+        }, 100);
         
     }
 }

@@ -50,6 +50,8 @@
         animation-name: fadeIn;
         animation-duration: 1s;
         animation-fill-mode: forwards; }
+      .projectPreview .container .infoBlock.mobile {
+        opacity: 1; }
       .projectPreview .container .infoBlock .projectTitle {
         text-transform: uppercase;
         font-size: 21px;

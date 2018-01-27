@@ -34,7 +34,7 @@ var DefaultDecorators = [{
     getButtonStyles: function getButtonStyles(disabled) {
       return {
         border: 0,
-        background: 'rgba(0,0,0,0.4)',
+        background: 'rgba(0,0,0,0.0)',
         color: 'white',
         padding: 10,
         outline: 0,
@@ -64,7 +64,7 @@ var DefaultDecorators = [{
     getButtonStyles: function getButtonStyles(disabled) {
       return {
         border: 0,
-        background: 'rgba(0,0,0,0.4)',
+        background: 'rgba(0,0,0,0.0)',
         color: 'white',
         padding: 10,
         outline: 0,

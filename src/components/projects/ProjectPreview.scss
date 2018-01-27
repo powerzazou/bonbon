@@ -55,6 +55,9 @@
                 animation-duration: 1s;
                 animation-fill-mode: forwards;
             }
+            &.mobile {
+                opacity: 1;
+            }
             .projectTitle {
                 text-transform: uppercase;
                 font-size: 21px;
