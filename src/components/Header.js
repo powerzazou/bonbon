@@ -49,7 +49,12 @@ class Header extends Component {
                             WORK
                         </Link>
                     </div>
-                    <div id={'menuItem' + (menuItemCount + 1)} className={'menuItem'} >About</div>
+                    <div id={'menuItem2'} className={'menuItem'} >About</div>
+                    <div id={'menuItem3'} className={'menuItem'} >
+                        <a href='http://paulinemidon.tumblr.com' target='_blank'>
+                            Atmosphere
+                        </a>
+                    </div>
                     <div className='social'>
                         <a href='https://www.instagram.com/paulinemidon/' target='_blank'>
                             <img src='/images/instagram_logo.png' alt="instagram" />
