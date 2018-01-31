@@ -1,0 +1,31 @@
+@import '../styles/_colors.scss';
+
+.aboutPage {
+  width: 90%;
+  margin: auto;
+  padding-top: 20px;
+  min-height: 400px;
+  max-width: 1100px;
+  color: $text;
+  text-align: center;
+
+  .aboutTitle {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .aboutNormal {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+
+  .aboutItalic {
+    margin-top: 20px;
+    font-style: italic;
+    font-size: 14px;
+  }
+  .aboutContact {
+      margin-top: 40px;
+      font-size: 18px;
+  }
+}

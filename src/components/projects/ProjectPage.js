@@ -28,7 +28,6 @@ class ProjectPage extends Component {
     render() {
         const project = this.state.project;
         const carousel = (project.carousel) ? this.getCarousel(project.carousel) : null;
-        console.log(carousel);
         if (typeof this.state.project === 'undefined') {
             return (
                 <div>

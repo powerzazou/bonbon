@@ -36,6 +36,9 @@ class Header extends Component {
         if (this.props.additionnalClasses) {
             classes += ' ' + this.props.additionnalClasses;
         }
+
+        const workClasses = window.location.pathname === '/about' ? 'menuItem' : 'menuItem selected';
+        const aboutClasses =  window.location.pathname === '/about' ? 'menuItem selected' : 'menuItem';
         return (
             <div className={classes}>
                 <div className='logo'>
@@ -44,12 +47,16 @@ class Header extends Component {
                     </Link>
                 </div>
                 <div className='menu'>
-                    <div className={'menuItem selected'}>
+                    <div className={workClasses}>
                         <Link to="/">
                             WORK
                         </Link>
                     </div>
-                    <div id={'menuItem2'} className={'menuItem'} >About</div>
+                    <div id={'menuItem2'} className={aboutClasses} >
+                        <Link to="/about">
+                            ABOUT
+                        </Link>
+                    </div>
                     <div id={'menuItem3'} className={'menuItem'} >
                         <a href='http://paulinemidon.tumblr.com' target='_blank'>
                             Atmosphere

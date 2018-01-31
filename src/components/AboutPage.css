@@ -1,0 +1,21 @@
+.aboutPage {
+  width: 90%;
+  margin: auto;
+  padding-top: 20px;
+  min-height: 400px;
+  max-width: 1100px;
+  color: #29838c;
+  text-align: center; }
+  .aboutPage .aboutTitle {
+    font-weight: bold;
+    font-size: 20px; }
+  .aboutPage .aboutNormal {
+    margin-top: 20px;
+    font-size: 16px; }
+  .aboutPage .aboutItalic {
+    margin-top: 20px;
+    font-style: italic;
+    font-size: 14px; }
+  .aboutPage .aboutContact {
+    margin-top: 40px;
+    font-size: 18px; }
