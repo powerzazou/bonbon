@@ -31,6 +31,14 @@
       color: #29838c;
       text-transform: uppercase;
       margin: 25px; }
+      @media (max-width: 600px) {
+        .header .menu .menuItem {
+          margin-left: 10px;
+          margin-right: 10px; } }
+      @media (max-width: 350px) {
+        .header .menu .menuItem {
+          margin-left: 5px;
+          margin-right: 5px; } }
       .header .menu .menuItem.selected {
         color: #29838c; }
         .header .menu .menuItem.selected:after {
@@ -56,5 +64,12 @@
     .header .menu .social {
       padding-left: 11px;
       padding-right: 11px; }
+      @media (max-width: 350px) {
+        .header .menu .social {
+          padding-left: 5px;
+          padding-right: 5px; } }
     .header .menu .social:last-of-type {
       margin-right: 28px; }
+      @media (max-width: 600px) {
+        .header .menu .social:last-of-type {
+          margin-right: 10px; } }
