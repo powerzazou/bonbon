@@ -42,18 +42,15 @@ class ProjectPreview extends Component {
         }
         const infoBlock = (bowser.tablet || bowser.mobile) ?
             ((<div className={'infoBlock mobile'}>
-                <p className='projectBrand' dangerouslySetInnerHTML={{__html: project.accroche.brand}}></p>
-                <p className='projectTitle'>{project.title}</p>
-
+                <p className='projectDescription' dangerouslySetInnerHTML={{__html: project.accroche.catchPhrase}}></p>
             </div>))
             :
             (<div className={infoBlockClasses}>
-                <p className='projectBrand' dangerouslySetInnerHTML={{__html: project.accroche.brand}}></p>
-                <p className='projectTitle'>{project.title}</p>
+                <p className='projectDescription' dangerouslySetInnerHTML={{__html: project.accroche.catchPhrase}}></p>
                 <div className='projectDetails'>
-                    <p className='projectDescription' dangerouslySetInnerHTML={{__html: project.accroche.catchPhrase}}></p>
                     <p className='projectType' dangerouslySetInnerHTML={{__html: project.accroche.type}}></p>
                     <p className='projectSeparator'>•</p>
+                    <p className='projectBrand'>{project.accroche.brand}</p>
                     <p className='projectYear'>{project.accroche.year}</p>
                 </div>
             </div>)

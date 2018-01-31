@@ -47,6 +47,9 @@ class ProjectPage extends Component {
                         </div>
                         <div>
                             <p className='projectBrand' dangerouslySetInnerHTML={{__html: project.accroche.brand}}></p>
+                            {project.accroche.brandExtra &&
+                                <p className='projectBrandExtra' dangerouslySetInnerHTML={{__html: project.accroche.brandExtra}}></p>
+                            }
                             <p className='projectYear'>{project.accroche.year}</p>
                         </div>
                     </div>
