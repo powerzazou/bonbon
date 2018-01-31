@@ -20,7 +20,7 @@
     animation-duration: 1s;
     top: 0%; }
   .header .logo img {
-    padding: 6px; }
+    margin: 6px; }
   .header .menu {
     display: flex;
     justify-content: space-between;

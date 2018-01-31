@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import './App.css';
 import AboutPage from './components/AboutPage';
+import retina from 'retinajs';
 
 class App extends Component {
     constructor (props) {
@@ -78,6 +79,7 @@ class App extends Component {
     }
 
     componentDidMount() {
+        window.addEventListener('load', retina);
         if ('scrollRestoration' in window.history) {
             window.history.scrollRestoration = 'manual';
         }

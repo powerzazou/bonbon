@@ -43,7 +43,7 @@ class Header extends Component {
             <div className={classes}>
                 <div className='logo'>
                     <Link to="/">
-                        <img src={this.state.logoSrc} className="App-logo" alt="logo" />
+                        <img src={this.state.logoSrc} className="App-logo" alt="logo" data-rjs="2" />
                     </Link>
                 </div>
                 <div className='menu'>
