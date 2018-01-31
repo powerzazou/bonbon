@@ -49,7 +49,7 @@ class App extends Component {
                     {(this.state.contentClass === 'hidden' || this.state.contentClass === 'shown') && 
                         <div id='introSlide' className={'gradient-wrapper ' + introSlideClass} onClick={(e) => this.handleClickOnIntro(e)}>
                             <div id='introSlideLogo'>
-                                <img src='/images/logo_intro.png'/>
+                                <img src='/images/logo_intro.gif'/>
                             </div>
                             <div id='introSlideArrow' >
                                 <img onMouseEnter={this.handleMouseEnterOnArrow} src='/images/arrow_intro.png'/>
