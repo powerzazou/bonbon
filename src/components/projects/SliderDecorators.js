@@ -12,6 +12,8 @@ var _createReactClass = require('create-react-class');
 
 var _createReactClass2 = _interopRequireDefault(_createReactClass);
 
+var bowser = require('bowser');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var DefaultDecorators = [{
@@ -120,12 +122,13 @@ var DefaultDecorators = [{
       };
     },
     getButtonStyles: function getButtonStyles(active) {
+      const padding = (bowser.mobile) ? 5 : 10;
       return {
         border: 0,
         background: 'transparent',
         color: active ? '#29838c' : '#82bbb8',
         cursor: 'pointer',
-        padding: 10,
+        padding: padding,
         outline: 0,
         fontSize: 24,
         opacity: active ? 1 : 0.6

@@ -19,7 +19,7 @@ class AboutPage extends Component {
                     Motion design <br/>
                 </div>
                 <div className='aboutContact'>
-                    <a href='mailto:paulinemidon.design@gmail.com'><img src='/images/enveloppe.png' /><br/>CONTACT</a>
+                    <a href='mailto:paulinemidon.design@gmail.com'><img src='/images/enveloppe.png' data-rjs="2"/><br/>CONTACT</a>
                 </div>
             </div>
         );

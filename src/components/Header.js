@@ -64,12 +64,12 @@ class Header extends Component {
                     </div>
                     <div className='social'>
                         <a href='https://www.instagram.com/paulinemidon/' target='_blank'>
-                            <img src='/images/instagram_logo.png' alt="instagram" />
+                            <img src='/images/instagram_logo.png' alt="instagram" data-rjs="2" />
                         </a>
                     </div>
                     <div className='social'>
                         <a href='https://www.linkedin.com/in/pauline-midon-05972566/' target='_blank'>
-                            <img src='/images/linkedin_logo.png' alt="linkedin" />
+                            <img src='/images/linkedin_logo.png' alt="linkedin" data-rjs="2" />
                         </a>
                     </div>
 
