@@ -7,7 +7,7 @@ class AboutPage extends Component {
     }
     render() {
         return (
-            <div className='aboutPage'>
+            <div className='aboutPage' style={{minHeight: (window.innerHeight - 150) + 'px'}}>
                 <div className='aboutTitle'> PAULINE MIDON</div>
                 <div className='aboutNormal'>
                     Designer graphique basée à Paris <br/>

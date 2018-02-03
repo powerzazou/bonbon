@@ -74,10 +74,13 @@ class ProjectPreview extends Component {
     afterRender () {
 
         // Truc relou pour caler l'image a la bonne hauteur :(
+        // TODO : trouver un truc malin :(
         setTimeout(() => {
             const containerHeight  = document.querySelector('#' + this.state.id + ' > .container > img').height;
             if (containerHeight > 0) {
                 document.querySelector('#'+ this.state.id).style.height = containerHeight + 'px';
+            } else {
+                setTimeout(() => { this.afterRender() }, 100);
             }
         }, 100);
         

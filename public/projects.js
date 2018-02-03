@@ -46,8 +46,10 @@ window.bonbonProjects = [
         text: 'Quand une nouvelle botte sort du four, on lui prépare une sortie en grande pompe.',
         carousel: [
             '/images/projects/PROJET_3/PROJET3_SLIDER1_1400x900.jpg',
+            '/images/projects/PROJET_3/PROJET3_SLIDER2_1400x900.jpg',
             '/images/projects/PROJET_3/PROJET3_SLIDER3_1400x900.jpg',
-            '/images/projects/PROJET_3/PROJET3_SLIDER4_1400x900.jpg'
+            '/images/projects/PROJET_3/PROJET3_SLIDER4_1400x900.jpg',
+            '/images/projects/PROJET_3/PROJET3_SLIDER5_1400x900.jpg',
         ]
     },
     {
@@ -113,11 +115,11 @@ window.bonbonProjects = [
         accroche: {
             image: '/images/projects/PROJET_7/PROJET7_COUVERTURE_510x340.jpg',
             catchPhrase: 'Sur la piste de l\'aigle',
-            type: 'Story-telling <br/> Motion design',
+            type: 'Gestion de projet <br/> Story-telling <br/> Motion design',
             brand: 'Brand: Aigle',
             year: '2017',
         },
-        text: 'Calendrier de l’avent animé destiné à la communauté instagram dans le cadre de l’opération de noël 360°',
+        text: 'Calendrier de l’avent animé destiné à la communauté instagram dans le cadre de l’opération de noël 360° <br/> <a href="http://paulinemidon.tumblr.com/" target="_blank" style="text-decoration:underline">Découvrir les animations</a>',
         carousel: [
             '/images/projects/PROJET_7/PROJET7_SLIDER1_1400x900.gif',
             '/images/projects/PROJET_7/PROJET7_SLIDER2_1400x900.jpg',

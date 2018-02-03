@@ -1,9 +1,9 @@
 .footer {
   background-color: #5dafb7;
   text-align: center;
-  color: white;
-  text-transform: uppercase;
-  padding: 15px; }
+  color: #29838c;
+  padding: 15px;
+  font-size: 12px; }
   .footer.hidden {
     display: none; }
   .footer p {

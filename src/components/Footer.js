@@ -10,8 +10,7 @@ class Footer extends Component {
         }
         return (
             <div className={classes}>
-                <p>Madame Bonbon /// Design Graphique /// Paris</p>
-                <p>2018</p>
+                <p>2018 Pauline Midon All rights reserved.</p>
             </div>
         );
     }

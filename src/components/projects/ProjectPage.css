@@ -6,8 +6,17 @@
   max-width: 1100px;
   color: #29838c;
   text-align: center; }
+  .projectPage .projectType {
+    font-style: italic; }
   .projectPage .slider-list {
     text-align: center; }
   .projectPage .projectDescription {
     text-align: left;
     font-size: 14px; }
+  .projectPage .projectYear {
+    margin-top: 0; }
+  .projectPage .projectBrandExtra {
+    margin-top: 0;
+    margin-bottom: 0; }
+  .projectPage .projectBrand {
+    margin-bottom: 0; }

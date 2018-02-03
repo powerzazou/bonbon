@@ -9,12 +9,27 @@
   color: $text;
   text-align: center;
 
+  .projectType {
+    font-style: italic;
+  }
+
   .slider-list {
     text-align: center;
   }
   .projectDescription {
     text-align: left;
     font-size: 14px;
+  }
+
+  .projectYear {
+    margin-top: 0;
+  }
+  .projectBrandExtra {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .projectBrand {
+    margin-bottom: 0;
   }
 
 }

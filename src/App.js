@@ -59,7 +59,7 @@ class App extends Component {
                     }
                     <div className={'container ' + contentClass}>
                         <Header additionnalClasses={contentClass} />
-                            <div className={'gradient-wrapper'} style={{minHeight: window.innerHeight + 'px'}}>
+                            <div className={'gradient-wrapper'} style={{minHeight: (window.innerHeight - 54) + 'px'}}>
                                 <div className='parallax-wrapper'>
                                     <div className='parallax-element'>
                                         <Switch>

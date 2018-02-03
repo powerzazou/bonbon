@@ -59,7 +59,7 @@ class Header extends Component {
                     </div>
                     <div id={'menuItem3'} className={'menuItem'} >
                         <a href='http://paulinemidon.tumblr.com' target='_blank'>
-                            Atmosphere
+                            Motion
                         </a>
                     </div>
                     <div className='social'>
