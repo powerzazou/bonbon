@@ -18,6 +18,9 @@
     height: 100%; }
     .app #introSlide #introSlideLogo img {
       max-width: 50%; }
+      @media (min-width: 500px) {
+        .app #introSlide #introSlideLogo img {
+          max-width: 250px; } }
 
 @keyframes bounce {
   from {
