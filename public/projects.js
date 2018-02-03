@@ -1,7 +1,7 @@
 window.bonbonProjects = [
     {
         id: 1,
-        order: 1,
+        order: 6,
         title: 'Aigle et moi',
         accroche: {
             image: '/images/projects/PROJET_1/PROJET1_COUVERTURE_510x340.jpg',
@@ -29,7 +29,8 @@ window.bonbonProjects = [
         text: 'Une agence immobilière haut de gamme s’ouvre à Paris. Allez toquer, ils sont sympas.',
         carousel: [
             '/images/projects/PROJET_2/PROJET2_SLIDER1_1400x900.jpg',
-            '/images/projects/PROJET_2/PROJET2_SLIDER2_1400x900.jpg'
+            '/images/projects/PROJET_2/PROJET2_SLIDER2_1400x900.jpg',
+            '/images/projects/PROJET_2/PROJET2_SLIDER3_1400x900.jpg'
         ]
     },
     {
@@ -39,7 +40,7 @@ window.bonbonProjects = [
         accroche: {
             image: '/images/projects/PROJET_3/PROJET3_COUVERTURE_510x340.jpg',
             catchPhrase: 'La botte Rock & Walk',
-            type: 'Identité visuelle <br/> Dispositif de lancement 360°',
+            type: 'Dispositif de lancement 360° : <br/> Identité visuelle, dispositif presse & retail',
             brand: 'Brand: Aigle',
             year: '2017',
         },
@@ -68,7 +69,8 @@ window.bonbonProjects = [
             '/images/projects/PROJET_4/PROJET4_SLIDER1_1400x900.jpg',
             '/images/projects/PROJET_4/PROJET4_SLIDER2_1400x900.jpg',
             '/images/projects/PROJET_4/PROJET4_SLIDER3_1400x900.jpg',
-            '/images/projects/PROJET_4/PROJET4_SLIDER4_1400x900.jpg'
+            '/images/projects/PROJET_4/PROJET4_SLIDER4_1400x900.jpg',
+            '/images/projects/PROJET_4/PROJET4_SLIDER5_1400x900.jpg'
         ]
     },
     {
@@ -85,16 +87,18 @@ window.bonbonProjects = [
         text: 'Les îles Lofoten façon graphique',
         carousel: [
             '/images/projects/PROJET_5/PROJET5_SLIDER1_1400x900.jpg',
-            '/images/projects/PROJET_5/PROJET5_SLIDER2_1400x900.jpg'
+            '/images/projects/PROJET_5/PROJET5_SLIDER2_1400x900.jpg',
+            '/images/projects/PROJET_5/PROJET5_SLIDER3_1400x900.jpg',
+            '/images/projects/PROJET_5/PROJET5_SLIDER4_1400x900.jpg'
         ]
     },
     {
         id: 6,
-        order: 6,
+        order: 1,
         title: 'La Compagnie de l\'Absinthe',
         accroche: {
             image: '/images/projects/PROJET_6/PROJET6_COUVERTURE_510x340.jpg',
-            catchPhrase: 'La Compagnie de l\'Absinthe',
+            catchPhrase: 'Diluvienne',
             type: 'Direction artistique <br/> Affiche <br/> Dossier de Presse',
             brand: 'Brand: La Compagnie de l\'Absinthe',
             year: '2016',
