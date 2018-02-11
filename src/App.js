@@ -81,7 +81,7 @@ class App extends Component {
     componentDidMount() {
         window.addEventListener('load', retina);
         if ('scrollRestoration' in window.history) {
-            window.history.scrollRestoration = 'manual';
+            window.history.scrollRestoration = 'auto';
         }
         if (this.state.contentClass === 'hidden' || this.state.contentClass === 'shown') {
             document.querySelector('body').style.overflow = 'hidden';
