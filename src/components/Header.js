@@ -13,23 +13,6 @@ class Header extends Component {
             logoSrc: (window.innerWidth < 450) ? '/images/logo_header_mobile.png' : '/images/logo_header.png'
         };
     }
-    handleScroll (e) {
-        // ça part tres mal ça va falloir trouver autre chose ...
-        const scrollY = window.scrollY;
-        let newSelectedCategoryNumber = this.state.selectedCategoryNumber;
-        const previouslySelectedCategoryNumber = this.state.selectedCategoryNumber;
-        this.categoriesOffset.forEach((categoryOffset, index) => {
-            if (categoryOffset - (window.innerHeight * 2) <= scrollY) {
-                newSelectedCategoryNumber = index;
-            }
-        });
-        if (newSelectedCategoryNumber !== this.state.selectedCategoryNumber) {
-            this.setState({
-                previouslySelectedCategoryNumber: previouslySelectedCategoryNumber,
-                selectedCategoryNumber: newSelectedCategoryNumber
-            });
-        }
-    }
     render() {
         let menuItemCount = 0;
         let classes = 'header';
@@ -76,13 +59,6 @@ class Header extends Component {
                 </div>
             </div>
         );
-    }
-
-    componentDidMount () {
-        [...document.querySelectorAll('.menuItemContainer')].forEach((node) => {
-            this.categoriesOffset.push(node.offsetTop);
-        });
-        document.addEventListener('scroll', (e) => this.handleScroll(e))
     }
 }
 

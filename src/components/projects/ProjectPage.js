@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom';
 import Carousel from 'nuka-carousel';
 import './ProjectPage.css';
 import SliderDecorators from './SliderDecorators';
+import ArrayFindPollyfill from '../../helpers/ArrayFindPolyfill'
 
 
 class ProjectPage extends Component {
     constructor (props) {
         super(props);
-        console.log(props);
+        ArrayFindPollyfill();
         this.state = {
             project: this.getProject(props.match.params.id)
         }
