@@ -51,6 +51,7 @@ window.bonbonProjects = [
             '/images/projects/PROJET_3/PROJET3_SLIDER3_1400x900.jpg',
             '/images/projects/PROJET_3/PROJET3_SLIDER4_1400x900.jpg',
             '/images/projects/PROJET_3/PROJET3_SLIDER5_1400x900.jpg',
+            '/images/projects/PROJET_3/PROJET3_SLIDER6_1400x900.jpg'
         ]
     },
     {

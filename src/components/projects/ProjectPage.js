@@ -21,8 +21,8 @@ class ProjectPage extends Component {
     }
     getCarousel (carousel) {
         return <Carousel decorators={SliderDecorators}> 
-            {carousel.map((image) => {
-                return <img src={image}/>
+            {carousel.map((image, index) => {
+                return <img key={index} src={image}/>
             })}
         </Carousel>
     }
