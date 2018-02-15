@@ -35,7 +35,7 @@ Ne pas hésiter a consulter la doc du bootstrap, elle est assez fournie et conti
 
 La petite particularité est que les assets graphiques ainsi que les données projets (projets.js) sont incluses dans le dossier public (donc pas compilé/minifié/etc). Cela afin de permettre l'édition de ses ressources simplement via FTP (a l'ancienne :D) sans avoir a recompiler le projet :)  
 
-Noter aussi l'ajout de react-router et d'une lib pour le carousel des pages projets, histoire de rester simple :) 
+**Noter aussi l'ajout** de [react-router](https://github.com/ReactTraining/react-router) et d'une lib [(nuka-carousel)](https://github.com/FormidableLabs/nuka-carousel) pour le carousel des pages projets, histoire de rester simple :) Les controles du carousel ont d'ailleurs été customizés (/src/components/projects/SliderDecorators.js)
 
 ## Mise en prod
 Pour mettre en prod sur OVH, le plus simple est de passer par un client FTP. Au préalable il faut bien sur générer le build : 
@@ -43,9 +43,11 @@ Pour mettre en prod sur OVH, le plus simple est de passer par un client FTP. Au 
 ``` bash
 npm run build
 ```
-Ensuite envoyer le contenu du dossier "build" dans le repertoire www, tout simplement
+Ensuite envoyer le contenu du dossier "build" dans le repertoire www, tout simplement :) 
 
-Pour avoir un envir' de recettage (hors local), on peut utiliser [Surge](https://surge.sh/) assez simplement. Il faut d'abord créer un compte puis
+**NB** : si jamais le contenu du site (image/projets) a été mis a jour manuellement via FTP, penser a récuperer les modifs et a les gitter, histoire d'avoir un master a jour ;)
+
+Pour avoir un envir' de recettage (hors local), on peut utiliser [Surge](https://surge.sh/) assez simplement. Il faut d'abord créer un compte puis, en CLI : 
 
 ``` bash
 # install de surge, a faire une fois uniquement
@@ -63,3 +65,12 @@ surge
 # dans le dialog surge mettre project path vers le dossier build
 project path: /path/to/project/build
 ```
+
+
+## Versionning
+
+Depuis la mise en prod, j'ai commencé a versionner (semver-style) a base de changelog, tags git et numéro de version dans le package.json. 
+
+L'idée étant simplement de pouvoir rollback facilement le site a une version donnée, juste au cas ou...  
+
+Ca serait bien de continuer dans cette lignée :) Et eventuellement automatiser le process (genre un "npm run release:major|minor|patch" qui updaterait le changlog en se basant sur les commit, la version du package.json et créerait le tag git ). Enfin si quelqu'un a le temps et l'envie :D 
